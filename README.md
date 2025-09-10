@@ -18,15 +18,15 @@
 - 페이스북이 주도하는 표준화 규칙으로 대부분의 SNS플랫폼에서 활용되고있음  
 - 모든 플랫폼이 동일한 방식으로 오픈 그래프를 처리하는 것은 아님  
 - 웹페이티의 메타 태그에 선언함    
-- (HEAD)  
+- (HEAD)  <BR>
     meta property="og.type" content="website"><BR>
-    meta property="og.url" content="https..">
-    meta property="og.title" content="제목">
-    meta property="og.description" content="설명요약">
-    meta property="og.image" content="https.">
-    meta property="og.site_name" conten="사이트이름">
+    meta property="og.url" content="https.."><BR>
+    meta property="og.title" content="제목"><BR>
+    meta property="og.description" content="설명요약"><BR>
+    meta property="og.image" content="https."><BR>
+    meta property="og.site_name" conten="사이트이름"><BR>
     meta property="og.locale" content="ko_KR">
-    (HEAD)
+    <BR>(HEAD)
 
 ## 09.03 2주차
 #### IDE 플러그인   
