@@ -26,7 +26,16 @@
     meta property="og.image" content="https."><BR>
     meta property="og.site_name" conten="사이트이름"><BR>
     meta property="og.locale" content="ko_KR">
-    <BR>(HEAD)
+    <BR>(HEAD)  
+#### layout과 template의 차이  
+- 마스터 텍스트 스타일 ㅍㄴ집  
+    - layout.tsx : 경로별 공유 레이아웃 (유지됨.정적) - 네비게이션,사이드바 등  
+    - template.tsx : 메번 새 인스턴스 생성 (초기화됨.동적) - 페이지별로 초기화 필요  
+#### 2.Organizing your project(프로젝트 구성)  
+##### colocation - 파일 및 폴더를 기능별로 그룹화하여 프로젝트의 구졸르 명확하게 정의  
+- app 디렉토리에서 중첩된 폴더는 라우팅 구조를 정의  
+- 각 폴더는 URL경로의 해당 세그먼트에 맵핑되는 라우팅 세그먼트를 나타냄  
+- 즉 프로젝트 파일을 app 디렉토리의 라우팅 세그먼트 내에 안전하게 배치하여 실수로 라우팅되지 않을 수 있도록 할 수 있음  
 
 ## 09.03 2주차
 #### IDE 플러그인   
