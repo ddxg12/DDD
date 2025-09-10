@@ -19,7 +19,7 @@
 - 모든 플랫폼이 동일한 방식으로 오픈 그래프를 처리하는 것은 아님  
 - 웹페이티의 메타 태그에 선언함    
 - (HEAD)  
-    meta property="og.type" content="website">
+    meta property="og.type" content="website"><BR>
     meta property="og.url" content="https..">
     meta property="og.title" content="제목">
     meta property="og.description" content="설명요약">
