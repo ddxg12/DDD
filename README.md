@@ -1,5 +1,32 @@
 # 202130235 최한솔
-<hr>
+<hr>  
+
+## 09.10 3주차
+#### 용어 정의  
+- 원문에는 route라는 단어가 자주 등장하고, 사전적 의미로는 "경로"라고 함  
+- route는 경로를 의미하고 routing는 경로를 찾아가는 과정을 의미함.  
+- path 또한 경로로 번역하기 때문에 구별을 위해 대부분 routing으로 번역함  
+- directory와 folder는 특별한 구분 없이 나오며, 최상위 폴더의 경우 directory로 하위 폴더는 folder로 쓰는 경우가 많지만 반드시 그렇지는 않음.  
+- directory와 folder는 os에 따라 구분되는 용어이기 때문에 같은의미로 이해하면 됨.  
+- segment는 routing과 관련이 있는 directory의 별칭 정도로 이해하면 편함  
+    1. Folder and file conventions(폴더 파일 및 규칙)  
+        - 최상위 폴더 (top-level folders)  
+            - 최상위 폴더는 애프리케이션의 코드와 정적 자산을 구성하는데 사용.  
+            - 최상위 파일은 애플리케이션 구성,종속성 관리,미들웨어 실행, 모니터링 도구 통합,환경 변수 정의에 사용.( 파일들이 프로젝트 생성과 동시에 모두 생성되는 것은 아님.)  
+#### Open Graph Protocol  
+- 웹사이트나 페이스북,인스타,X,카카오톡 등에 링크를 전달할 때 '미리보기'를 생성하는 프로토콜  
+- 페이스북이 주도하는 표준화 규칙으로 대부분의 SNS플랫폼에서 활용되고있음  
+- 모든 플랫폼이 동일한 방식으로 오픈 그래프를 처리하는 것은 아님  
+- 웹페이티의 메타 태그에 선언함    
+- (HEAD)  
+    meta property="og.type" content="website">
+    meta property="og.url" content="https..">
+    meta property="og.title" content="제목">
+    meta property="og.description" content="설명요약">
+    meta property="og.image" content="https.">
+    meta property="og.site_name" conten="사이트이름">
+    meta property="og.locale" content="ko_KR">
+    (HEAD)
 
 ## 09.03 2주차
 #### IDE 플러그인   
