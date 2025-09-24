@@ -1,6 +1,38 @@
 # 202130235 최한솔
 <hr>  
 
+## 09.24 5주차  
+#### searchParams란?  
+- URL의 쿼리 문자열(Query String)을 읽는 방법  
+- 예시 URL : /products?category=shoes&page=2  
+- 여기서 category=shoes, page=2가 search parameters 임  
+- next.js의 App Router에서 searchParams는 다음과 같이 사용될 수 있음  ( export default function ProductsPage({searchParams}) {
+    return <p>카테고리: {searchParams.category}</p>:
+})
+- searchParms는 컴포넌트의 props로 전달되며, 내부적으로는 URLSearchParams 처럼 작동함  
+#### 왜 동적 렌더링이 되는가?  
+- Next.js에서 페이지는 크게 정적 또는 동적으로 렌더링 될 수 있음  
+#### Linking beteween pages  
+- link 컴포넌트를 사용하여 경로 사이를 탐색 할 수 있음  
+- link는 html a 태그를 확장하여 prefetching 및 client-side navigation 기능을 제공하는 next.js으 기본제공 컴포넌트임  
+- 블로그 글 목록을 생성하려면 next/link 에서 link를 가져와서 컴포넌트에 href prop를 전달함  
+#### Route 방식 비교  
+- react vs Next.js 라우팅 방식의 차이  
+    - 수동 vs 자동  
+    - 외부라이브러리 필요 vs 내장파일 기반  
+    - 직접 route정의 vs 라우트 자동 매핑  
+- react는 기본적으로 라우팅 기능이 없기 때문에, 직접 라우터 라이브러리를 설치해서 라우팅을 설정해야함  
+- next.js는 자체적으로 라우팅 시스템 내장  
+#### server 렌더링  
+- 서버 렌더링에는 발생 시점에 따라 두가지 유형이 있음.  
+- 정적 렌더링은 빌드 시점이나 재검증 중에 발생하며, 결과는 캐시됨  
+- 동적 렌더링은 클라이언트 요청에 대한 응답으로 요청 시점에 발생  
+- 서버렌더링의 단점은 클라이언트가 새 경로를 표시하기 전에 서버의 응답을 기다려야함  
+- nex.js는 사용자가 방문할 가능성이 높은 경로를 미리 가져오고, 클라이언트 측 전환을 수행하여 지연 문제를 해결  
+
+
+## 09.17 4주차  
+
 ## 09.10 3주차
 #### 용어 정의  
 - 원문에는 route라는 단어가 자주 등장하고, 사전적 의미로는 "경로"라고 함  
