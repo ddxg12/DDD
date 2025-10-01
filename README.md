@@ -26,14 +26,7 @@
 - 플러그인을 사용하면 대규모 종속성을 제거하여, 번들 크기를 식별하고 줄일 수 있음  
 - 가능하다면 클라이언트에서 서버로 로직을 이동. 자세한 내용은 서버 및 클라이언트 컴포넌트 문서 참조  
 ## 09.24 5주차  
-#### searchParams란?  
-- URL의 쿼리 문자열(Query String)을 읽는 방법  
-- 예시 URL : /products?category=shoes&page=2  
-- 여기서 category=shoes, page=2가 search parameters 임  
-- next.js의 App Router에서 searchParams는 다음과 같이 사용될 수 있음  ( export default function ProductsPage({searchParams}) {
-    return <p>카테고리: {searchParams.category}</p>:
-})
-- searchParms는 컴포넌트의 props로 전달되며, 내부적으로는 URLSearchParams 처럼 작동함  
+
 #### 왜 동적 렌더링이 되는가?  
 - Next.js에서 페이지는 크게 정적 또는 동적으로 렌더링 될 수 있음  
 #### Linking beteween pages  
@@ -56,7 +49,14 @@
 
 
 ## 09.17 4주차  
-
+#### searchParams란?  
+- URL의 쿼리 문자열(Query String)을 읽는 방법  
+- 예시 URL : /products?category=shoes&page=2  
+- 여기서 category=shoes, page=2가 search parameters 임  
+- next.js의 App Router에서 searchParams는 다음과 같이 사용될 수 있음  ( export default function ProductsPage({searchParams}) {
+    return <p>카테고리: {searchParams.category}</p>:
+})
+- searchParms는 컴포넌트의 props로 전달되며, 내부적으로는 URLSearchParams 처럼 작동함  
 ## 09.10 3주차
 #### 용어 정의  
 - 원문에는 route라는 단어가 자주 등장하고, 사전적 의미로는 "경로"라고 함  
