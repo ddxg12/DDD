@@ -1,6 +1,32 @@
 # 202130235 최한솔
 <hr>  
 
+## 10.29   
+#### Context provider 코드 설명  
+- 1.context 생성 코드 - client 컴포넌트  
+    - context를 사용하면 props를 사용하지 않고도 전역적으로 사용할 theme, 언어 설정, 로그인 정보 등을 하위 컴포넌트에 전달 할 수 있음  
+    - createcontext는 react 컴포넌트 트리 전체에 값을 공유할 수 있도록 하는 역할을 함  
+    - createcontext로 context 객체를 생성하여 theme state를 공유함  
+    - 초기값은 provider 가 없을 때 사용할 fallback value임  
+        - react에서는 precontext를 호출 할 때 기본값이 반드시 있어야 함  
+        
+    - document.documentElement는 HTML 문서의 html요소를 가리킴  
+- 3.rootlayout 수정코드 설명 - server 컴포넌트
+    - themeprovider 와 themestatus버튼 컴포넌트 사용을 위해 import를 추가함  
+    - themestatus는 출력을 원하는 곳에 삽입함.  
+    - themeprovider는 html을 감싸 줌  
+####  Context provider 순서도 형식으로 정리  
+- 1.앱시작 / rootlayout 렌더  
+    -rootlayout이 렌더되고 themeprovider로 children을 감쌈.  
+- 2.context 생성 (초기화)  
+    - themecontext = createcontext가 정의되어 있음  
+- 3.provider 인스턴스 생성       
+    - themeprovider 컴포넌트가 실행되어 내부 state 생성  
+    - provider의 value = 로 설정  
+- 4.하위 트리 렌더링 
+- 5.consumer 사용  : themeStatue 렌더
+- 6.사용자 상호작용 : 버튼 클릭  
+- 7.상태 변경 내부 처리  
 ## 10.01 6주차
 #### client-side transitions  
 - 일반적으로 서버렌더링 페이지로 이동하면 전체 페이지가 업로드 됩니다. 이로 인해 state가 삭제되고, 스크롤 위치가 재설정되며 상호작용이 차단됨  
