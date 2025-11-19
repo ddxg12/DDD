@@ -1,6 +1,74 @@
 # 202130235 최한솔
-<hr>  
+<hr> 
 
+## 11.26 
+#### bootstrap 실습 
+ -   1. bootstrap 패키지 설치  
+     2. 설치가 끝나면 사용하고 싶은 컴포넌트에 다음과 같이 import해서 사용.
+     3. 문서에서는 루트레이아웃으로 적용하는 것으로 되어있으나 확인을 위해 블로그2 페이지를 만든 후에 로컬레이아웃에 적용해 보도록 하겠습니다. 
+- blog2page에 부트스트랩을 임포트 하지 않아도 사용할 수 있음  
+#### 로컬 레이아웃이 어디까지 영향을 미치는지 확인
+-   1. blog2/blog2com.tsx 컴포넌트를 만들고 출력 확인  
+    2. blog2/components/blog2com2.tsx
+    3. components.blog2rootcom.tsx
+    4. blog3 페이지 만들고 지금까지 만든 컴포넌트 추가
+    5. blog3/blog3com.tsx 컴포넌트 만들고 blog3페이지에 삽임
+#### 순서 지정 및 병합  
+- next.js는 프로덕션 빌드 중에 스타일시트를 자동으로 정크하여 css를 최적화함  
+- css의 순서는 코드에서 스타일을 가져오는 순서에 따라 다름  
+- ex. basebutton이 page.module.css보다 먼저 import 되기 때문에 base-button.module.css가 page.module.css 보다 먼저 요청됨  
+
+
+## 11.19
+#### Next.js에서 추천하는 스타일링 방법  
+- 대표적인 글로벌 스타일이 적용되는 예
+    1. html, body 기본 스타일  
+    2. reset 스타일  
+    3. 전역 폰트 import  
+    4. 전역 색상/레이아웃 
+    5. 공통 animation 정의 등  
+- 반드시 전역적으로 도앚ㄱ해야하는 스타일만  global.css를 선언해야함.  
+- 즉, 앱 전체에 적용되어야 하는 단 한번의 스타일을 globals.css 정의하라는 의미임.
+- tailwind css = 대부분의 컴포넌트 스타일링  
+- tailwind는 컴포넌트 단위 스타일 작성에 최적화되어 있음  
+    1. margin/padding  
+    2. flex/grid 레이아웃
+    3. border, colorhover, transition  
+    4. 반응형 클래스 등  
+- 위의 예가 포함되는 대부분의 컴포넌트는 tailwind로 스타일링을 할 경우 생산성을 향상 시키고 빠른 유지보수에도 유리함  
+- 즉, 버튼,카드,내비게이션 바 등 일반적인 UI는 tailwind 클래스만으로 스타일링 하는 것이 좋음.  
+#### 외부 스타일 시트  
+- 외부 스타일 시트  
+    - 외부 패키지로 제공되는 스타일시트는 app 디렉토리의 컴포넌트를 포함하여, 어느곳에서나 import 해서 사용할 수 있음.  
+    - src 디렉토리를 사용하는 경우라면 src 디렉토리의 어느곳에서나 사용할 수 있다는 의미임.  
+## 11.12
+#### 
+- 1. tailwind css  
+    - 사용자 정의 디자인을 구축하기 위한 저수준 클래스제공 프레임 워크  
+    - 프로젝트 생성할 때 tailwind css를 선택했으면 별도의 설치 필요 x  
+    - 전역 css 파일에서 tailwind 가져오기  
+    - 루트 레이아웃에서 css파일 가져오기  
+    - 애플리케이션에서 tailwind의 유틸리티 클래스를 사용할 수 있음.  
+- 2. css modules
+    - css 모듈은 고유한 클래스 이름을 생성하여 css의 범위를 로컬로 지정  
+    - 이름 충돌에 대한 걱정 없이 다른 파일에서 동일한 클래스를 사용할 수 있음  
+    - css모듈을 시작혀려면 .module.css 확장자가 있는 새 파일을 만들고, app디렉토리의 컴포넌트를 가져옴.  
+- 3. 글로벌 전역 css    
+    - 전역 css를 사용하여 응용프로그램 전체에 스타일 적용 가능  
+    - 루트레이아웃은 앞과 동일
+## 11.05  
+####  Context provider 순서도 형식으로 정리  
+- 1.앱시작 / rootlayout 렌더  
+    -rootlayout이 렌더되고 themeprovider로 children을 감쌈.  
+- 2.context 생성 (초기화)  
+    - themecontext = createcontext가 정의되어 있음  
+- 3.provider 인스턴스 생성       
+    - themeprovider 컴포넌트가 실행되어 내부 state 생성  
+    - provider의 value = 로 설정  
+- 4.하위 트리 렌더링 
+- 5.consumer 사용  : themeStatue 렌더
+- 6.사용자 상호작용 : 버튼 클릭  
+- 7.상태 변경 내부 처리  
 ## 10.29   
 #### Context provider 코드 설명  
 - 1.context 생성 코드 - client 컴포넌트  
